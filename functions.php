@@ -10,4 +10,13 @@ function htmltowp_theme_styles(){
 
 add_action('wp_enqueue_scripts', 'htmltowp_theme_styles');
 
+// adds (enqueues) js scripts to the theme
+function htmltowp_theme_js(){
+    wp_enqueue_script('modernizr_js', get_template_directory_uri() . '/js/modernizr.min.js', '', '', false);
+    wp_enqueue_script('foundation_js', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '', true);
+    wp_enqueue_script('main_js', get_template_directory_uri() . '/js/app.js', array('jquery', 'foundation_js'), '', true);
+}
+
+add_action('wp_enqueue_scripts', 'htmltowp_theme_js');
+
 ?>
