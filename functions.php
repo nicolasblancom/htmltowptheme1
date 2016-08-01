@@ -3,6 +3,9 @@
 // adds menu option from admin area
 add_theme_support( 'menus' );
 
+// adds option for featured image from editing post in admin area
+add_theme_support( 'post-thumbnails' );
+
 // register some menus, later we can add a newly created menu to one of these
 function htmltowp_register_theme_menus(){
     register_nav_menus(array(
