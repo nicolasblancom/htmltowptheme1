@@ -22,7 +22,7 @@
                                 </a>
                             </li>
                             <li class="cat">in <?php the_category( ', ' ); ?></li>
-                            <li class="date">in <?php the_time( 'F j, Y ' ); ?></li>
+                            <li class="date">in <?php the_time( get_option( 'date_format' ) ); ?></li>
                         </ul>
 
                         <?php if( get_the_post_thumbnail ): ?>
