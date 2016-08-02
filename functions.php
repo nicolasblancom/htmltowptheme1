@@ -6,6 +6,13 @@ add_theme_support( 'menus' );
 // adds option for featured image from editing post in admin area
 add_theme_support( 'post-thumbnails' );
 
+// sets the excerpts lenght to a number
+function htmltowp_excerpt_length( $length ){
+    return 16;
+}
+
+add_filter( 'excerpt_length', 'htmltowp_excerpt_length', 999 );
+
 // register some menus, later we can add a newly created menu to one of these
 function htmltowp_register_theme_menus(){
     register_nav_menus(array(
