@@ -22,6 +22,22 @@ function htmltowp_register_theme_menus(){
 
 add_action( 'init', 'htmltowp_register_theme_menus' );
 
+// add widget areas
+function htmltowp_create_widget( $name, $id, $description ){
+    register_sidebar( array(
+        'name' => __( $name ),
+        'id' => $id,
+        'description' => __( $description ),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="module-heading">',
+        'after_title' => '</h2>'
+    ));
+}
+
+htmltowp_create_widget( 'Page Sidebar', 'page', 'Displays on the side of pages with a sidebar' );
+htmltowp_create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section' );
+
 // adds (enqueues) stylesheets to the theme
 function htmltowp_theme_styles(){
     wp_enqueue_style('foundation_css', get_template_directory_uri() . '/css/foundation.css');
