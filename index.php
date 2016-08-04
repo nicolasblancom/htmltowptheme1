@@ -12,7 +12,7 @@
 
             <?php endwhile; else: ?>
 
-            <p><?php _e( 'Sorry, no post matching what you asked for...' ); ?></p>
+            <p><?php _e( 'Sorry, no post matching what you asked for...', 'htmltowp' ); ?></p>
 
             <?php endif; ?>
         </div>

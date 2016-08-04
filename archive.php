@@ -37,7 +37,7 @@
 
                     <?php endwhile; else: ?>
 
-                    <p><?php _e( 'Sorry, no pages were found...' ); ?></p>
+                    <p><?php _e( 'Sorry, no pages were found...', 'htmltowp' ); ?></p>
 
                     <?php endif; ?>
                 </div>
@@ -45,7 +45,7 @@
 
 
             <?php get_sidebar(); ?>
-            
+
         </div>
     </div>
 </section>

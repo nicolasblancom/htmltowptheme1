@@ -16,7 +16,7 @@ add_filter( 'excerpt_length', 'htmltowp_excerpt_length', 999 );
 // register some menus, later we can add a newly created menu to one of these
 function htmltowp_register_theme_menus(){
     register_nav_menus(array(
-        'primary-menu' => __('Primary Menu')
+        'primary-menu' => __('Primary Menu', 'htmltowp')
     ));
 }
 
@@ -25,9 +25,9 @@ add_action( 'init', 'htmltowp_register_theme_menus' );
 // add widget areas
 function htmltowp_create_widget( $name, $id, $description ){
     register_sidebar( array(
-        'name' => __( $name ),
+        'name' => __( $name, 'htmltowp' ),
         'id' => $id,
-        'description' => __( $description ),
+        'description' => __( $description, 'htmltowp' ),
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="module-heading">',
