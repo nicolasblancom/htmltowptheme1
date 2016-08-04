@@ -19,6 +19,7 @@
                                 by <?php the_author_posts_link(); ?>
                             </li>
                             <li class="cat">in <?php the_category( ', ' ); ?></li>
+                            <li class="tag"> <?php the_tags( '| Tags: ', ', ', ' | '  ); ?></li>
                             <li class="date">in <?php the_time( get_option( 'date_format' ) ); ?></li>
 
                         </ul>
@@ -45,7 +46,7 @@
 
 
             <?php get_sidebar(); ?>
-            
+
         </div>
     </div>
 </section>
