@@ -37,8 +37,9 @@ function htmltowp_create_widget( $name, $id, $description ){
 
 function htmltowp_create_widget_init(){
     htmltowp_create_widget( 'Page Sidebar', 'page', 'Displays on the side of pages with a sidebar' );
-    htmltowp_create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section'
+    htmltowp_create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section' );
 }
+
 add_action( 'widgets_init', 'htmltowp_create_widget_init' );
 
 // adds (enqueues) stylesheets to the theme
