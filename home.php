@@ -24,7 +24,7 @@
                             <li class="date">in <?php the_time( get_option( 'date_format' ) ); ?></li>
                         </ul>
 
-                        <?php if( get_the_post_thumbnail ): ?>
+                        <?php if( get_the_post_thumbnail() ): ?>
                         <div class="img-container">
                             <?php the_post_thumbnail( 'large' ); ?>
                         </div>
