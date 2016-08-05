@@ -12,7 +12,7 @@
         <h1><a class='current' href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
         <a href="" class="nav-toggle"><span></span>Menu</a>
         <nav>
-            <h1 class="open"><a class='current' href="index.html">G</a></h1>
+            <h1 class="open"><a class='current' href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 
             <?php
             // sets menu default options, and prints out the 'primary menu' in this particular place
